@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="main.js" defer></script>
+    <title>TicTacToe</title>
+</head>
+<body>
+    <svg width=250px height=250px>
+        <defs>
+            <rect id=line width=10px height=200px fill=black></rect>
+            <circle id=circle cx=0 cy=0 r=15 fill=white fill-opacity=0 stroke=black stroke-width=3px ></circle>
+            <g id=xShape>
+                <rect id=line width=3px height=50px fill=black transform="rotate(45 10 10)" ></rect>
+                <rect id=line width=3px height=50px fill=black transform="rotate(135 10 10)" x=25 y=-5></rect>
+            </g>
+        </defs>
+        <g id=board >
+            <use href="#line" x=60 y=10></use>
+            <use href="#line" x=160 y=10></use>
+            <use href="#line" transform="rotate(270 10 10)" x=-50 y=10 ></use>
+            <use href="#line" transform="rotate(270 10 10)" x=-150 y=10 ></use>
+
+            <rect id=square width=50 height=50 fill=white transform="translate(10 10)" onmouseover=mouseHover(event) onmouseleave=mouseLeave(event) onclick=mouseClick(event) > </rect>
+            <rect id=square width=50 height=50 fill=white x=90 y=10 onmouseover="mouseHover(event)"  onmouseleave=mouseLeave(event) onclick=mouseClick(event) > </rect>
+            <rect id=square width=50 height=50 fill=white x=170 y=10 onmouseover="mouseHover(event)" onmouseleave=mouseLeave(event) onclick=mouseClick(event) > </rect>
+            <rect id=square width=50 height=50 fill=white x=10 y=90 onmouseover="mouseHover(event)" onmouseleave=mouseLeave(event) onclick=mouseClick(event) > </rect>
+            <rect id=square width=50 height=50 fill=white x=10 y=170 onmouseover="mouseHover(event)" onmouseleave=mouseLeave(event) onclick=mouseClick(event) > </rect>
+            <rect id=square width=50 height=50 fill=white x=90 y=90 onmouseover="mouseHover(event)" onmouseleave=mouseLeave(event) onclick=mouseClick(event) > </rect>
+            <rect id=square width=50 height=50 fill=white x=170 y=170 onmouseover="mouseHover(event)" onmouseleave=mouseLeave(event) onclick=mouseClick(event) > </rect>
+            <rect id=square width=50 height=50 fill=white x=90 y=170 onmouseover="mouseHover(event)" onmouseleave=mouseLeave(event) onclick=mouseClick(event) > </rect>
+            <rect id=square width=50 height=50 fill=white x=170 y=90 onmouseover="mouseHover(event)" onmouseleave=mouseLeave(event) onclick=mouseClick(event) > </rect>
+
+            <g id=choice>
+                
+            </g>
+
+        </g>
+    </svg>
+
+    <input type=button onclick="clearBoard()" value=Clear>
+</body>
+</html>
